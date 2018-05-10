@@ -10,11 +10,13 @@ console.log('sourced')
 var keyCodesToSpeech = [
     {keyCode: 65, utterance: 'A'}
 ]
+var ignoreKeyCodeArray = [20, 9, 13, 93, 187, 27]
+
 
 document.addEventListener('keydown', function (e) {
-    console.log(e)
-        console.log(e.keyCode)
+  
         var speech = new SpeechSynthesisUtterance(e.key);
         speech.lang = 'en-US';
-        window.speechSynthesis.speak(speech)    
+        window.speechSynthesis.speak(speech)
+
 });
