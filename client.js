@@ -10,7 +10,7 @@ console.log('sourced')
 var keyCodesToSpeech = [
     {keyCode: 65, utterance: 'A'}
 ]
-var ignoreKeyCodeArray = [20, 9, 13, 93, 187, 27]
+var ignoreKeyCodeArray = [20, 9, 13, 93, 187, 27, 16]
 
 let voices = [];
 window.speechSynthesis.onvoiceschanged = function () {
