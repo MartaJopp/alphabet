@@ -25,5 +25,16 @@ return
      speech.voice = voices[40];
      speech.lang = 'en-US';
      window.speechSynthesis.speak(speech)
+     
 }
 });
+
+var header = document.getElementById("pictures");
+var images = header.getElementsByClassName("image");
+for (var i = 0; i < images.length; i++) {
+    images[i].addEventListener("keydown", function () {
+        var current = document.getElementsByClassName("pressed");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
+}
