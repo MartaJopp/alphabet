@@ -18,23 +18,29 @@ window.speechSynthesis.onvoiceschanged = function () {
 };
 
 document.addEventListener('keydown', function (e) {
+    const keyCode = e.keyCode
  if (ignoreKeyCodeArray.includes(e.keyCode))  {
 return
 } else {
      var speech = new SpeechSynthesisUtterance(e.key);
+
      speech.voice = voices[40];
      speech.lang = 'en-US';
      window.speechSynthesis.speak(speech)
-     
+     if (e.keyCode === 69){
+    
+     }
+    
 }
 });
 
-var header = document.getElementById("pictures");
-var images = header.getElementsByClassName("image");
-for (var i = 0; i < images.length; i++) {
-    images[i].addEventListener("keydown", function () {
-        var current = document.getElementsByClassName("pressed");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-    });
-}
+// var header = document.getElementById("pictures");
+// var images = header.getElementsByClassName("image");
+// for (var i = 0; i < images.length; i++) {
+//     images[i].addEventListener("keydown", function () {
+//         var current = document.getElementsByClassName("pressed");
+//         console.log(current)
+//         current[0].className = current[0].className.replace(" active", "");
+//         this.className += " active";
+//     });
+// }
